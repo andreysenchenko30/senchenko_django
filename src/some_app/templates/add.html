@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href ="{% static 'home_page/css/base.css' %}">
+    <title>Home {{ name }} page</title>
+</head>
+<body>
+<form action ="{% url 'add' %}" method = "POST">
+    {% csrf_token %}
+    <label for = "first_name">Name:</label>
+    <input id = "first_name" name="first_name" placeholder="first_name">
+    <label for = "last_name">Last name:</label>
+    <input id = "last_name" name="last_name" placeholder="last_name">
+    <label for = "age">Age:</label>
+    <input id = "age" name="age" placeholder="age">
+    <button type="submit"> Отправить! </button>
+    </form>
+</body>
+</html>

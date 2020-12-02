@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+        <form action ="{% url 'write_line' %}" method = "GET">
+            <label for = "first_name">Name:</label>
+            <input id = "first_name" name="first_name" placeholder="first_name">
+            <label for = "last_name">Name:</label>
+            <input id = "last_name" name="last_name" placeholder="last_name">
+            <button type="submit"> Отправить! </button>
+        </form>
+{% endblock %}
+</body>
+</html>
